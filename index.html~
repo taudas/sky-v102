@@ -3,12 +3,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <body>
+<script>
+window.RufflePlayer = window.RufflePlayer || {};
+window.RufflePlayer.config = {
+    // Options affecting the whole page
+
+    // Options affecting files only
+    "autoplay": "on",
+    "splashScreen": false,
+};
+</script>
+
     <object>
-        <embed src="skyclock.swf" width="100%" autoplay="on" />
+        <embed src="../skyclock.swf"  autoplay="on" />
     </object>
 
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
 </body>
+
 
 
 
