@@ -4,7 +4,7 @@
 
 <body>
     <object>
-        <embed src="skyclock.swf" width="100%" />
+        <embed src="skyclock.swf" width="100%" autoplay="on" />
     </object>
 
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
