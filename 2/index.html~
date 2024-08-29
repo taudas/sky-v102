@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <body>
-
+<script>
 window.RufflePlayer = window.RufflePlayer || {};
 window.RufflePlayer.config = {
     // Options affecting the whole page
@@ -12,6 +12,8 @@ window.RufflePlayer.config = {
     "autoplay": "auto",
     "splashScreen": false,
 };
+
+</script>
 
 
     <object>
