@@ -20,7 +20,7 @@ window.RufflePlayer.config = {
         <embed src="../skyclock.swf"  autoplay="on" />
     </object>
     <object>
-        <embed src="../skyclock.swf"  autoplay="on" />
+        <embed src="../skyclock24.swf"  autoplay="on" />
     </object>
 
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
