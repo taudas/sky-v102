@@ -4,23 +4,16 @@
 
 <body>
 <script>
-window.RufflePlayer = window.RufflePlayer || {};
-window.RufflePlayer.config = {
-    // Options affecting the whole page
-
-    // Options affecting files only
-    "autoplay": "on",
-    "unmuteOverlay": "hidden",
-    "letterbox": "off"
-};
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("skyclock.swf");
+    });
 </script>
-
-    <object>
-        <embed src="../skyclock.swf"  autoplay="on" letterbox="off" />
-    </object>
-
-<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-
+<script src="path/to/ruffle/ruffle.js"></script>
 </body>
 
 
