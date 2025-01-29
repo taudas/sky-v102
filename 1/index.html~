@@ -1,30 +1,51 @@
-<html>
-
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: black; /* Prevent background borders */
+        }
+        #flash-container {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        object, embed {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
 <body>
-<script>
-window.RufflePlayer = window.RufflePlayer || {};
-window.RufflePlayer.config = {
-    // Options affecting the whole page
 
-    // Options affecting files only
-    "autoplay": "on",
-    "unmuteOverlay": "hidden",
-    "letterbox": "off"
-};
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = {
+        "autoplay": "on",
+        "unmuteOverlay": "hidden",
+        "letterbox": "off",
+        "scaling": "fill" // Ensures no black bars
+    };
 </script>
 
-    <object>
-        <embed src="../skyclock0.swf"  autoplay="on" letterbox="off" />
+<div id="flash-container">
+    <object data="../skyclock.swf" type="application/x-shockwave-flash">
+        <param name="movie" value="../skyclock0.swf" />
+        <param name="allowfullscreen" value="true" />
+        <param name="autoplay" value="on" />
     </object>
+</div>
 
 <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 
 </body>
-
-
-
-
-
 </html>
